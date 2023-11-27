@@ -1,0 +1,404 @@
+:root {
+    --FontFamily-pagina: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --FontesSize-Titulo: 40px;
+    --FontesSize-Texto: 18px;
+    --CorPrincipal: #0082CD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--FontFamily-pagina);
+    font-size: var(--FontesSize-Texto)
+}
+
+h2 {
+    font-size: var(--FontesSize-Titulo);
+}
+
+.divNav {
+    height: 15%;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+    min-height: 50px;
+    max-width: 1800px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.navLogoTexto {
+    margin-left: 5px;
+    display: flex;
+    width: 230px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.navTexto {
+    font-weight: bold;
+    font-size: 90px;
+}
+
+.imgNav {
+    width: 65%;
+
+}
+
+.navHamburguer {
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navLista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* ocultar a bolinha do li */
+.navLista li {
+    list-style-type: none;
+    margin-right: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    margin-left: 20px;
+    list-style-type: none;
+    color: #141414;
+}
+
+article {
+    max-width: 1800px;
+    margin: auto;
+
+}
+
+/* article .imgArticle {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    filter: brightness(50%);
+    background-image: url(img/fotoinicio2.png);
+    width: 100%;
+  
+    background-size: cover;
+} */
+
+.imgArticle {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    /* filter: brightness(50%); */
+    background-image: url(img/fotoinicio2.png);
+  
+    width: 100%;
+    /* cover */
+    background-size: cover;
+}
+
+section .divTexto h2 {
+    color: #ffffff;
+    font-size: 90px;
+    width: 100%;
+    filter: none;
+}
+
+section .divTexto .texto1 {
+    text-align: center;
+}
+
+section .divTexto h2 span {
+  
+    font-size: 90px;
+    color: #00a2ff;
+}
+
+.juntos {
+    background-color: #F1F1F1;
+}
+
+.juntos2 {
+    margin-top: -70px;
+    background-color: #F1F1F1;
+}
+
+.corte {
+    margin-top: 100px;
+    height: 350px;
+    border-left: 5px solid;
+    margin-left: 150px;
+    color: #F1F1F1;
+}
+
+.quemSomosTitulo {
+    width: 30%;
+
+
+}
+
+.quemSomosTexto {
+    width: 50%;
+}
+
+.quemsomosDiv {
+
+    display: flex;
+    min-height: 405px;
+    width: 100%;
+
+    margin-bottom: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.text {
+
+    font-family: Roboto;
+    width: 100%;
+    font-size: 30px;
+
+}
+
+
+.nossasAtividadesSec {
+    margin-bottom: 70px;
+
+    margin-top: -270px;
+
+    padding-bottom: 95px;
+}
+
+.nossasAtividadesTitulo {
+    display: flex;
+    justify-content: center;
+}
+
+.nossasAtividadesh2 {
+    margin-bottom: 50px;
+
+    font-size: 40px;
+}
+
+.divQuemsomos {
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.Tudo {
+    margin-bottom: 50px;
+}
+
+.Tudo p {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+.imgQuemsomos {
+    width: 250px;
+}
+
+.secQuemSomos {
+    margin-top: -20px;
+    background-color: #0082CD;
+    padding-top: 35px;
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+}
+
+.paper {
+
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 auto;
+
+}
+
+.bg-svg {
+    width: 100%;
+}
+
+.secintegra {
+    background-color: #0082CD;
+    margin-top: -20px;
+}
+
+.integrantes {
+    min-height: 440px;
+    position: relative;
+}
+
+.divIntegrantesEquipe {
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+    font-size: 90px;
+}
+
+.quadroIntegrantes {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pictureFoto {
+    margin-top: 20px;
+}
+
+.paulo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    height: 450px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    box-shadow: 30px 30px 3px #2326;
+    transition: transform 0.3s;
+}
+
+.paulo:hover {
+    transform: scale(1.4);
+}
+
+.areaInte {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.projeto {
+    padding-top: 30px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+    position: relative;
+}
+
+.tituprojeto {
+    margin-top: -700px;
+    font-size: 42px;
+    width: 100%;
+    font-size: 90px;
+}
+
+.textinho {
+    font-family: Roboto;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.sobreproje {
+    width: 80%;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .projeto {
+        width: 100%;
+    }
+
+    .tituprojeto {
+        font-size: 60px;
+    }
+
+    .textinho {
+        font-size: 20px;
+    }
+
+    .sobreproje {
+        width: 100%;
+    }
+}
+
+
+.comput {
+
+    margin-left: -108px;
+    margin-top: -288px;
+    position: absolute;
+    z-index: 2;
+}
+
+button {
+    border: none;
+    background-color: #0082CD;
+    border-radius: 15px;
+    width: 247px;
+    height: 50px;
+    margin-top: -180px;
+    margin-left: 1180px;
+    box-shadow: 15px 11px 3px #2326;
+}
+
+.botaoMais {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 38px;
+    height: 50px;
+    line-height: normal;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+.cell {
+    margin-right: -140px;
+    margin-top: -638px;
+    margin-left: 1357px;
+    position: absolute;
+}
+
+
+.ultimo {
+    width: 1600px;
+    height: 511px;
+    margin-left: -180px;
+    margin-top: -480px;
+    position: absolute;
+}
+
+.footerN {
+    height: 50px;
+    margin-top: 200px;
+    min-height: 10px;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    color: #0082CD;
+}
