@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def homepage():
-    return render_template("index.html")
+    return render_template("v2/index.html")
 
 @app.route("/contatos")
 def contatos():
@@ -22,6 +22,10 @@ def contatos():
 @app.route("/usuarios/<nome_usuario>")
 def usuarios(nome_usuario):
     return render_template("usuarios.html", nome_usuario=nome_usuario)
+
+@app.route("/<nome_usuario>")
+def homenome(nome_usuario):
+    return render_template("v2/index.html", nome_usuario=nome_usuario)
 
 #colocar o site no ar
 
