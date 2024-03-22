@@ -1,7 +1,16 @@
-
-from flask import Flask, render_template
+from flask import Flask, render_template,request, redirect, url_for
 
 app = Flask(__name__)
+
+# importar o banco de dados
+from db import db, User
+
+db.create_all()
+
+app = Flask(__name__)
+app.config.from_object('config')
+db.init_app(app)
+
 
 #criar a 1ª pagina do site
 
@@ -13,23 +22,44 @@ app = Flask(__name__)
 
 @app.route("/")
 def homepage():
-    return render_template("v2/index.html")
+    return render_template("index.html")
 
 @app.route("/projetos")
 def projetos():
-    return render_template("v2/projects.html")
+    return render_template("projects.html")
 
 @app.route("/projetos/<projeto>")
 def projeto(projeto):
-    return render_template("v2/projects.html", projeto=projeto)
+    return render_template("projects.html", projeto=projeto)
 
-@app.route("/usuarios/<nome_usuario>")
-def usuarios(nome_usuario):
-    return render_template("usuarios.html", nome_usuario=nome_usuario)
+@app.route("/sobre")
+def sobre():
+    return render_template("about.html")
 
-@app.route("/<nome_usuario>")
-def homenome(nome_usuario):
-    return render_template("v2/index.html", nome_usuario=nome_usuario)
+@app.route("/sobre/<usuario>")
+def usuario(usuario):
+    return render_template("about.html", usuario=usuario)
+
+# @app.route("/<nome_usuario>")
+# def homenome(nome_usuario):
+#     return render_template("v2/index.html", nome_usuario=nome_usuario)
+
+# rotas de registro e login
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+
+@app.route('/register', methods=['POST'])
+def register():
+    username = request.form.get('username')
+    password = request.form.get('password')
+
+    user = User(username=username, password=password)
+    db.session.add(user)
+    db.session.commit()
+
+    return redirect(url_for('login'))
 
 #colocar o site no ar
 
