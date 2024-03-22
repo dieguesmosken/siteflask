@@ -1,9 +1,10 @@
-from flask import Flask, render_template,request, redirect, url_for
-
+# Autor: Teuzin
+from flask import Flask, render_template,request, redirect, url_for, session
 app = Flask(__name__)
 
 # importar o banco de dados
 from db import db, User
+
 
 db.create_all()
 
@@ -40,10 +41,6 @@ def sobre():
 def usuario(usuario):
     return render_template("about.html", usuario=usuario)
 
-# @app.route("/<nome_usuario>")
-# def homenome(nome_usuario):
-#     return render_template("v2/index.html", nome_usuario=nome_usuario)
-
 # rotas de registro e login
 @app.route("/login")
 def login():
@@ -58,6 +55,19 @@ def register():
     user = User(username=username, password=password)
     db.session.add(user)
     db.session.commit()
+
+    return redirect(url_for('login'))
+
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form.get('username')
+    password = request.form.get('password')
+
+    user = User.query.filter_by(username=username).first()
+
+    if user and user.password == password:
+        session['logged_in'] = True
+        return redirect(url_for('home'))
 
     return redirect(url_for('login'))
 
