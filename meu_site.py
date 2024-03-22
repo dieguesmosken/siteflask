@@ -15,9 +15,13 @@ app = Flask(__name__)
 def homepage():
     return render_template("v2/index.html")
 
-@app.route("/contatos")
-def contatos():
-    return render_template("contatos.html")
+@app.route("/projetos")
+def projetos():
+    return render_template("v2/projects.html")
+
+@app.route("/projetos/<projeto>")
+def projeto(projeto):
+    return render_template("v2/projects.html", projeto=projeto)
 
 @app.route("/usuarios/<nome_usuario>")
 def usuarios(nome_usuario):
